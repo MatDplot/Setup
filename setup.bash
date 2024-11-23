@@ -1,8 +1,8 @@
 #!/bin/bash
 
 sudo apt update
-apt install wget
-apt install curl
+sudo apt install wget
+sudo apt install curl
 
 sudo apt install snapd
 sudo systemctl enable --now snapd.socket
