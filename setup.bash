@@ -18,9 +18,9 @@ cd App/
 #Tunderbird
 # https://support.mozilla.org/fr/kb/installer-thunderbird-sous-linux
 echo "Thunderbird"
-sudo apt install flatpak
+yes | sudo apt install flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-sudo flatpak install flathub org.mozilla.Thunderbird
+yes | sudo flatpak install flathub org.mozilla.Thunderbird
 
 
 
@@ -61,7 +61,7 @@ echo "Zoom"
 wget https://zoom.us/client/latest/zoom_amd64.deb
 sudo dpkg -i zoom_amd64.deb
 sudo apt update
-sudo apt --fix-broken install
+yes | sudo apt --fix-broken install
 
 
 
@@ -70,14 +70,14 @@ sudo apt --fix-broken install
 echo "Zotero"
 wget -qO- https://raw.githubusercontent.com/retorquere/zotero-deb/master/install.sh | sudo bash
 sudo apt update
-sudo apt install zotero
+yes | sudo apt install zotero
 
 
 
 #KeepassXC
 # https://doc.ubuntu-fr.org/keepassxc
 echo "KeepassXC"
-sudo apt install keepassxc
+yes | sudo apt install keepassxc
 
 
 
@@ -91,10 +91,10 @@ sudo apt install mattermost-desktop
 
 #python
 echo "Python"
-sudo apt install python3 python3-pip
+yes | sudo apt install python3 python3-pip
 pip3 install --break-system-packages matplotlib numpy pandas scikit-learn tensorflow keras h5py
 pip3 install --break-system-packages jupyterlab notebook
-sudo apt install hdf5-tools
+yes | sudo apt install hdf5-tools
 
 
 
@@ -103,13 +103,23 @@ echo "Root"
 sudo snap install root-framework
 
 
+echo "Thunderbird"
+yes | sudo apt install flatpak
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+yes | sudo flatpak install flathub org.mozilla.Thunderbird
+
 
 #LibreOffice
 echo "LibreOffice"
-sudo apt install libreoffice
+yes | sudo apt install libreoffice
 
 
 
 #Latex
 echo "Latex"
-sudo apt install texlive-full
+yes | sudo apt install texlive-full
+
+
+
+sudo apt-get clean
+sudo apt-get autoremove
