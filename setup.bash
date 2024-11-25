@@ -17,9 +17,9 @@ cd App/
 
 #Tunderbird
 # https://support.mozilla.org/fr/kb/installer-thunderbird-sous-linux
-apt install flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub org.mozilla.Thunderbird
+sudo apt install flatpak
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo flatpak install flathub org.mozilla.Thunderbird
 
 
 
@@ -94,4 +94,4 @@ sudo apt install libreoffice
 
 
 #Latex
-apt install texlive-full
+sudo apt install texlive-full
