@@ -7,6 +7,6 @@ cp -r * ~/.local/share/gnome-shell/extensions/dash-to-panel@jderose9.github.com
 gnome-extensions enable dash-to-panel@jderose9.github.com
 cd ..
 
-dconf load /org/gnome/shell/extensions/dash-to-panel/ < conf/dash-to-panel-settings.dconf
+dconf load /org/gnome/shell/extensions/dash-to-panel/ < ../Configuration/dash-to-panel-settings.dconf
 
-dconf load / < conf/gnome-settings-backup.dconf
+dconf load / < ../Configuration/gnome-settings-backup.dconf

@@ -1,0 +1,12 @@
+Host lxplus*.cern.ch
+    User mdubau
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials yes
+    PubkeyAuthentication no
+    ForwardAgent yes
+    CheckHostIP no
+    ServerAliveInterval 100
+    ControlPath /run/user/%i/%r@%h:%p
+    ControlMaster autoask
+    ControlPersist 1m
+
